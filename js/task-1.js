@@ -14,9 +14,9 @@ containerSize, і false, якщо ні.
 */
 `use strict`;
 
-function slugify(title) {
-
-    return title.toLowerCase().split(' ').join('-');
+function isEnoughCapacity(products, containerSize) {
+    const totalProducts = Object.values(products).reduce((sum, current) => sum + current, 0);
+    return totalProducts <= containerSize;
 }
 
 /* Перевiрка функцii */
