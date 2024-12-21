@@ -15,7 +15,10 @@ containerSize, і false, якщо ні.
 `use strict`;
 
 function isEnoughCapacity(products, containerSize) {
-    const totalProducts = Object.values(products).reduce((sum, current) => sum + current, 0);
+    let total = 0;
+    for (let products in products) {
+      total += products[product];
+    } 
     return totalProducts <= containerSize;
 }
 
