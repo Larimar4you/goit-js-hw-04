@@ -23,15 +23,11 @@ active hours!, де <Username> — це ім’я профілю,
 */
 
 `use strict`;
-  function filterArray(numbers, value) {
-    let result = [];
-      for (let i = 0; i < numbers.length; i++) {
-        if (numbers[i] > value) {
-          result.push(numbers[i]);
-      }
-    }
-    return result;
-  }
+function calcAverageCalories(days){
+  if (days.length === 0) return 0;
+  const totalCalories = days.reduce((sum, day) => sum + day.calories, 0);
+  return totalCalories / days.length;
+}
 
     /* Перевiрка функцii */
     console.log(profile.getInfo()); // "Jacob has 300 active hours!"
