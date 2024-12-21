@@ -19,7 +19,7 @@ function isEnoughCapacity(products, containerSize) {
     for (let products in products) {
       total += products[product];
     } 
-    return totalProducts <= containerSize;
+    return total <= containerSize;
 }
 
 /* Перевiрка функцii */
