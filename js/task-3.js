@@ -23,11 +23,26 @@ active hours!, де <Username> — це ім’я профілю,
 */
 
 `use strict`;
-function calcAverageCalories(days){
-  if (days.length === 0) return 0;
-  const totalCalories = days.reduce((sum, day) => sum + day.calories, 0);
-  return totalCalories / days.length;
-}
+const profile = {
+  username: "Jacob",
+  playTime: 300,
+
+  // Метод для зміни імені профілю
+  changeUsername: function(newName) {
+    this.username = newName;
+  },
+
+  // Метод для оновлення кількості годин
+  updatePlayTime: function(hours) {
+    this.playTime += hours;
+  },
+
+  // Метод для отримання інформації про профіль
+  getInfo: function() {
+    const amount = this.playTime;
+    return `${this.username} has ${amount} active hours!`;
+  }
+};
 
     /* Перевiрка функцii */
     console.log(profile.getInfo()); // "Jacob has 300 active hours!"
