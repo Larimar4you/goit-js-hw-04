@@ -16,7 +16,7 @@ containerSize, і false, якщо ні.
 
 function isEnoughCapacity(products, containerSize) {
     let total = 0;
-    for (let products in products) {
+    for (let product in products) {
       total += products[product];
     } 
     return total <= containerSize;
